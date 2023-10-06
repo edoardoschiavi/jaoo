@@ -24,20 +24,42 @@ public class Main {
         System.out.println(Arrays.toString(colors));
 
         // TODO: (1) create an array of cats, same size of the arrays above
-        Cat[] cats = new Cat[0];
+        Cat[] cats = new Cat[names.length];
         System.out.printf("The array of cats has %d length%n", cats.length);
 
         // TODO: (2) initialize the cats array
         // each cat should have name and color from the arrays above
+        int i = 0;
+        for(@SuppressWarnings("unused") Cat cat : cats) {
+        	cats[i] = new Cat(names[i], colors[i]);
+        	i++;
+        }
 
         System.out.printf("Currently there are %d cats in the program%n", Cat.getCount());
 
         // TODO: (3) each cat should meow
+        for(Cat cat : cats) {
+        	cat.meow();
+        }
 
         // TODO: (4) each cat named Kit should meow
+        for(Cat cat : cats) {
+        	if(cat.getName().equals("Kit") )
+        		cat.meow();
+        }
 
         // TODO: (5) only the first cat named Kit should meow
-
+        for(Cat cat : cats) {
+        	if(cat.getName().equals("Kit") ) {
+        		cat.meow();
+        		break;
+        	}
+        		
+        }
         // TODO: (6) only the cats in even position should meow
+        for(int j = 0; j < cats.length; j++ ) {
+        	if(j % 2 == 0)
+        		cats[j].meow();
+        }
     }
 }

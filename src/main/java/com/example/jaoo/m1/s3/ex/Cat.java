@@ -15,7 +15,9 @@ public class Cat {
     private static int count = 0;
 
     private String name;
-    private String color;
+    
+
+	private String color;
 
     /**
      * Cat with a given name and color
@@ -24,8 +26,10 @@ public class Cat {
      * @param color the cat color
      */
     public Cat(String name, String color) {
-        // TODO: initialize the object
-        // TODO: increase the counter
+        this.name = name;
+        this.color = color;
+        
+        count ++;
     }
 
     /**
@@ -39,7 +43,7 @@ public class Cat {
      * The current cat meow on the console
      */
     public void meow() {
-        // TODO: Print name and color to System.out
+        System.out.println("Meow");
     }
 
     /**
@@ -48,11 +52,14 @@ public class Cat {
      * @param word to be printed on out console
      */
     public void meow(String word) {
-        // TODO: Print word, cat name and color to System.out
+        System.out.println("Cat: " + this.name + ", color: " + this.color + ", MEOW");
     }
 
     @Override
     public String toString() {
         return "Cat [name=" + name + ", color=" + color + "]";
     }
+    public String getName() {
+		return name;
+	}
 }
