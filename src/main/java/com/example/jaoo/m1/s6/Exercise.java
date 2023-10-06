@@ -19,8 +19,23 @@ public class Exercise {
             System.out.println("Pass me one argument!");
         } else {
             // TODO (1) check if the argument contains only digits
+        	for(int i = 0; i < args[0].length(); i++) {
+        		if(!Character.isDigit(args[0].charAt(i))) {
+        			System.out.println("Wrong!");
+        			break;
+        		}
+        		System.out.println("Right!");
+        			
+        	}
             // TODO (2) check if the argument contains at least one digit
-
+        	for(int i = 0; i < args[0].length(); i++) {
+        		if(Character.isDigit(args[0].charAt(i))){
+        			System.out.println("");
+        			System.out.println("Right!");
+        			break;
+        		}	
+        	}
+        	System.out.println();
             System.out.println("Done");
         }
     }
