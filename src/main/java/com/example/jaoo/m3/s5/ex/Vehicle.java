@@ -21,4 +21,13 @@ public class Vehicle {
     public Vehicle() {
         log.info("Vehicle created");
     }
+    
+    public void LeftSteer() {
+    	System.out.println("The vehicle is left steering!");
+    }
+    
+    public void RightSteer() {
+    	System.out.println("The vehicle is right steering!");
+    }
 }
+

@@ -8,11 +8,14 @@ package com.example.jaoo.m1.s6;
 import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+
 /**
  * This exercise should be solved using a method in a primitive wrapper
  */
 public class Exercise {
 	//initialize logger
+	private static final String Error_NaN = "You have to insert valid number!";
 	
 	private static final Logger log = Logger.getGlobal();
 	
@@ -58,7 +61,7 @@ public class Exercise {
         		@SuppressWarnings("unused") int index = Integer.parseInt(args[1]);
 			} catch (NumberFormatException e) {
 				// TODO: handle exception
-				log.log(Level.SEVERE, "You have to insert valid number!", e);
+				log.log(Level.SEVERE, Error_NaN, e);
 			}
         }
     }
