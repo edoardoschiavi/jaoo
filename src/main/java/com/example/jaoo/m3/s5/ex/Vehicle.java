@@ -24,6 +24,7 @@ public class Vehicle {
     
     public void LeftSteer() {
     	System.out.println("The vehicle is left steering!");
+//    	System.out.println(getClass().getSimpleName() + " is left steering!");
     }
     
     public void RightSteer() {
