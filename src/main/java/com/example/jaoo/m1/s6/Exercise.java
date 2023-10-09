@@ -6,6 +6,7 @@
 package com.example.jaoo.m1.s6;
 
 import java.util.Arrays;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  * This exercise should be solved using a method in a primitive wrapper
@@ -50,15 +51,14 @@ public class Exercise {
         	System.out.println();
             System.out.println("Done");
         }
-        
+       
         if(args.length == 2) {
         	System.out.println(Arrays.toString(args));
         	try {
-				int index = Integer.parseInt(args[1]);
+        		@SuppressWarnings("unused") int index = Integer.parseInt(args[1]);
 			} catch (NumberFormatException e) {
 				// TODO: handle exception
-				log.warning("");
-				System.out.println("You have to insert valid number!");
+				log.log(Level.SEVERE, "You have to insert valid number!", e);
 			}
         }
     }
