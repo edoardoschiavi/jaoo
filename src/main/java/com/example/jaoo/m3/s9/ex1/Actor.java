@@ -11,6 +11,7 @@ package com.example.jaoo.m3.s9.ex1;
  * Abstract base class
  */
 public abstract class Actor {
+	private String name;
     /**
      * Canonical constructor
      * 
@@ -18,7 +19,14 @@ public abstract class Actor {
      */
     protected Actor(String name) {
         // TODO
+    	this.name = name;
     }
+    
+    public String getName() {
+    	return  "Actor:" + name;
+    }
+    
+    public abstract int getValue();
 
     /**
      * Fight against an enemy

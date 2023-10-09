@@ -5,6 +5,7 @@
  */
 package com.example.jaoo.m3.s9.ex1;
 
+
 /**
  * Exercise: create a hierarchy of classes based on Actor
  * <p>
@@ -28,16 +29,18 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO: create actors, both warriors and wizards
-        Actor[] actors = { /* ... */ };
+        Actor[] actors = {new Wizard("Merlino"), new Warrior("Giovanni"), new Warrior("Achille")};
 
         for (Actor actor : actors) {
-            System.out.println(actor);
+            System.out.println(actor.getName());
         }
 
         System.out.println("Let's fight ...");
-        for (Actor actor : actors) {
-            System.out.println("Actor: " + actor);
-            // ...
+        for(int i = 0; i < actors.length - 1; i ++) {
+        	for(int j = i + 1; j < actors.length; j ++) {
+        		boolean ris = actors[i].fight(actors[j]);
+        		System.out.println(ris ? actors[i].getName() + " won!" : actors[j].getName() + " won!");
+        	}
         }
     }
 }
