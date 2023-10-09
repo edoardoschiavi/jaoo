@@ -5,6 +5,8 @@
  */
 package com.example.jaoo.m1.s8.exercise;
 
+import java.lang.Math;
+
 /**
  * Complete the code
  * 
@@ -12,7 +14,8 @@ package com.example.jaoo.m1.s8.exercise;
  */
 public class Circle {
     // TODO: every circle should have its own radius
-
+	private double radius;
+	
     /**
      * Constructor
      * 
@@ -20,6 +23,7 @@ public class Circle {
      */
     public Circle(double radius) {
         // TODO: initialize the current circle radius
+    	this.radius = radius;
     }
 
     /**
@@ -28,7 +32,9 @@ public class Circle {
      * @return the circle area
      */
     public double area() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        //throw new UnsupportedOperationException("Not yet implemented");
+        double el = Math.pow(radius, 2);
+        return Math.PI *el;
     }
 
     /**
@@ -37,6 +43,8 @@ public class Circle {
      * @return the circle perimeter
      */
     public double perimeter() {
-        throw new UnsupportedOperationException("Not yet implemented");
+        //throw new UnsupportedOperationException("Not yet implemented");
+        double pi = Math.PI;
+        return (2*pi*radius);
     }
 }
