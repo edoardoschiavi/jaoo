@@ -3,7 +3,7 @@ package com.example.jaoo.m3.s9.ex1;
 public class Warrior extends Actor {
 	private int strength;
 
-	protected Warrior(String name) {
+	protected Warrior(String name, int strength) {
 		super(name);
 		this.strength = strength;
 	}
