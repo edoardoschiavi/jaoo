@@ -29,7 +29,7 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO: create actors, both warriors and wizards
-        Actor[] actors = {new Wizard("Merlino"), new Warrior("Giovanni"), new Warrior("Achille")};
+        Actor[] actors = {new Wizard("Merlino", 20), new Warrior("Giovanni", 10), new Warrior("Achille", 30)};
 
         for (Actor actor : actors) {
             System.out.println(actor.getName());
