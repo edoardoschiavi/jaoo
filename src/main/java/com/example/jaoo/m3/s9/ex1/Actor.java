@@ -23,7 +23,7 @@ public abstract class Actor {
     }
     
     public String getName() {
-    	return  "Actor:" + name;
+    	return  name;
     }
     
     public abstract int getValue();

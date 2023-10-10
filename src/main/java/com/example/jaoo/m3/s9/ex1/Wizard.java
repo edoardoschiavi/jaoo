@@ -1,7 +1,7 @@
 package com.example.jaoo.m3.s9.ex1;
 
 public class Wizard extends Actor {
-	int MagicLevel;
+	private int MagicLevel;
 
 	protected Wizard(String name, int MagicLevel) {
 		super(name);

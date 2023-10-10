@@ -28,18 +28,22 @@ public class Main {
      * @param args not used
      */
     public static void main(String[] args) {
-        // TODO: create actors, both warriors and wizards
-        Actor[] actors = {new Wizard("Merlino", 20), new Warrior("Giovanni", 10), new Warrior("Achille", 30)};
+        // create actors, in an example i used random
+        Actor[] actors = {new Wizard("Merlino", (int) (Math.random()*100)), new Warrior("Ettore", 10), new Warrior("Achille", 30),
+        		new Wizard("Thor", 35)};
 
+        System.out.println("List of all heroes:");
         for (Actor actor : actors) {
-            System.out.println(actor.getName());
+            System.out.println(actor.getName() + " " + actor.getValue());
         }
 
+        System.out.println();
         System.out.println("Let's fight ...");
         for(int i = 0; i < actors.length - 1; i ++) {
         	for(int j = i + 1; j < actors.length; j ++) {
         		boolean ris = actors[i].fight(actors[j]);
-        		System.out.println(ris ? actors[i].getName() + " won!" : actors[j].getName() + " won!");
+        		System.out.println(ris ? actors[i].getName() + " won against " + actors[j].getName()
+        		: actors[j].getName() + " won against " + actors[i].getName());
         	}
         }
     }
