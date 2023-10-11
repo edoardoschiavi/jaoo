@@ -5,7 +5,9 @@
  */
 package com.example.jaoo.m8.s11;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 
 /**
  * HashMap exercise
@@ -21,8 +23,31 @@ public class Exercise {
      * @return only the non-duplicated values from input
      */
     public Collection<Integer> singles(int[] data) {
-        // TODO
-        throw new UnsupportedOperationException("Not yet implemented");
+        var hashMap = new HashMap<Integer, Integer>();
+        for(Integer i : data) {
+        	// Tre modi per farlo
+        	Integer num = hashMap.putIfAbsent(i, 1);
+        	if(num != null)
+        		hashMap.put(i, num + 1);
+        	
+//			hashMap.put(i, hashMap.getOrDefault(i, 0) + 1);
+			
+			
+//        	if(hashMap.containsKey(i)) {
+//        		hashMap.put(i, hashMap.get(i) + 1);
+//        	} else {
+//        		hashMap.put(i, 1);
+//        	}
+       }
+        
+        var correctValues = new ArrayList<Integer>();
+        
+        for(Integer key : hashMap.keySet()) {
+        	if(hashMap.get(key) == 1)
+        		correctValues.add(key);
+        }
+        
+        return correctValues;
     }
 
     public static void main(String[] args) {
