@@ -6,6 +6,7 @@
 package com.example.jaoo.m8.s06;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 /**
  * HashSet exercise
@@ -25,7 +26,6 @@ public class Exercise {
      * @return the original data stripped of duplicates
      */
     public Collection<Integer> singles(Collection<Integer> data) {
-        // TODO
-        throw new UnsupportedOperationException("Not yet implemented");
+        return new HashSet<Integer>(data);
     }
 }
